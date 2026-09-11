@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#090812">
+  <meta name="description" content="Privacy Policy for LUMEX VPN™.">
+  <title>LUMEX VPN™ — Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #090812;
+      --panel: rgba(22, 19, 39, .86);
+      --panel-2: rgba(32, 26, 61, .72);
+      --text: #f7f5ff;
+      --muted: #b8b1cf;
+      --line: rgba(150, 119, 255, .22);
+      --purple: #8d70ff;
+      --blue: #46b9ff;
+      --green: #19d49a;
+      --shadow: 0 24px 80px rgba(0, 0, 0, .38);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(91, 66, 195, .24), transparent 34rem),
+        radial-gradient(circle at 95% 18%, rgba(0, 177, 255, .12), transparent 30rem),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.68;
+    }
+
+    a { color: #b8a8ff; text-underline-offset: 3px; }
+    a:hover { color: #d2c8ff; }
+
+    .wrap { width: min(960px, calc(100% - 32px)); margin: 0 auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(9, 8, 18, .78);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: .02em; }
+    .mark { position: relative; width: 36px; height: 36px; flex: 0 0 36px; }
+    .mark::before, .mark::after {
+      content: "";
+      position: absolute;
+      left: 15px;
+      top: -2px;
+      width: 7px;
+      height: 41px;
+      border-radius: 7px;
+      transform: rotate(45deg);
+      background: linear-gradient(180deg, var(--blue), #9c5cff 72%);
+      box-shadow: 0 0 18px rgba(114, 103, 255, .35);
+    }
+    .mark::after { transform: rotate(-45deg); background: linear-gradient(180deg, #ed64ef, var(--purple) 68%); }
+    .brand small { color: var(--purple); font-size: .72em; margin-left: 3px; }
+
+    .languages { display: flex; gap: 6px; padding: 5px; border: 1px solid var(--line); border-radius: 13px; background: rgba(255,255,255,.025); }
+    .languages button {
+      border: 0;
+      border-radius: 9px;
+      padding: 7px 10px;
+      color: var(--muted);
+      background: transparent;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 750;
+      cursor: pointer;
+    }
+    .languages button.active { color: white; background: linear-gradient(135deg, #7457e8, #4a3b95); }
+
+    main { padding: 64px 0 72px; }
+    .hero { padding: 42px; border: 1px solid var(--line); border-radius: 28px; background: linear-gradient(145deg, rgba(40,31,75,.82), rgba(17,15,31,.9)); box-shadow: var(--shadow); }
+    .eyebrow { color: #ab97ff; font-size: 13px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    h1 { margin: 10px 0 12px; font-size: clamp(38px, 7vw, 66px); line-height: 1.03; letter-spacing: -.045em; }
+    .lead { max-width: 720px; margin: 0; color: #d0c9e2; font-size: clamp(17px, 2vw, 20px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .chip { max-width: 100%; padding: 8px 12px; border: 1px solid rgba(141,112,255,.32); border-radius: 999px; color: #cfc5ff; background: rgba(141,112,255,.08); font-size: 13px; font-weight: 700; overflow-wrap: anywhere; }
+
+    .notice { margin: 24px 0; padding: 18px 20px; border: 1px solid rgba(25,212,154,.23); border-radius: 18px; background: rgba(25,212,154,.07); color: #c9f6e7; }
+    .content { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 28px; margin-top: 30px; }
+    aside { position: sticky; top: 104px; align-self: start; padding: 18px; border: 1px solid var(--line); border-radius: 18px; background: rgba(18,15,32,.65); }
+    aside a { display: block; padding: 7px 8px; border-radius: 9px; color: var(--muted); text-decoration: none; font-size: 14px; }
+    aside a:hover { color: white; background: rgba(141,112,255,.1); }
+
+    article section { margin-bottom: 18px; padding: 27px 30px; border: 1px solid var(--line); border-radius: 20px; background: var(--panel); }
+    h2 { margin: 0 0 12px; font-size: 22px; letter-spacing: -.02em; }
+    p { margin: 0 0 13px; color: #cbc5da; }
+    p:last-child { margin-bottom: 0; }
+    ul { margin: 10px 0 0; padding-left: 21px; color: #cbc5da; }
+    li + li { margin-top: 8px; }
+    strong { color: white; }
+
+    footer { padding: 0 0 44px; text-align: center; color: #847d99; font-size: 13px; }
+    [data-lang] { display: none; }
+    [data-lang].active { display: block; }
+
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 22px, 960px); }
+      .nav { min-height: 68px; }
+      .brand { gap: 8px; }
+      .mark { width: 30px; height: 30px; flex-basis: 30px; transform: scale(.83); transform-origin: left center; }
+      .brand span:last-child { font-size: 14px; white-space: nowrap; }
+      .languages { gap: 2px; padding: 4px; }
+      .languages button { padding: 6px 7px; font-size: 12px; }
+      main { padding-top: 24px; }
+      .hero { padding: 28px 22px; border-radius: 22px; }
+      h1 { overflow-wrap: anywhere; }
+      .lead, .notice, article { min-width: 0; overflow-wrap: anywhere; }
+      .content { display: block; }
+      aside { display: none; }
+      article section { padding: 23px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand" aria-label="LUMEX VPN"><span class="mark" aria-hidden="true"></span><span>LUMEX <small>VPN™</small></span></div>
+      <div class="languages" aria-label="Language">
+        <button type="button" data-switch="en" class="active">EN</button>
+        <button type="button" data-switch="ru">RU</button>
+        <button type="button" data-switch="tk">TK</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <div class="eyebrow">LUMEX VPN™ · Legal</div>
+      <h1 data-copy="title">Privacy Policy</h1>
+      <p class="lead" data-copy="lead">This policy explains what information LUMEX VPN™ processes, why it is needed, and the choices available to you.</p>
+      <div class="meta">
+        <span class="chip" data-copy="effective">Effective: September 11, 2026</span>
+        <span class="chip">Android · com.lumexvpn.app</span>
+      </div>
+    </div>
+
+    <div class="notice" data-copy="promise"><strong>Privacy by design.</strong> LUMEX VPN™ does not sell personal data and does not store your browsing history, DNS queries, passwords, messages, or file contents.</div>
+
+    <div class="content">
+      <aside aria-label="Contents">
+        <a href="#scope" data-copy="navScope">1. Scope</a>
+        <a href="#data" data-copy="navData">2. Data we process</a>
+        <a href="#use" data-copy="navUse">3. How data is used</a>
+        <a href="#sharing" data-copy="navSharing">4. Service providers</a>
+        <a href="#retention" data-copy="navRetention">5. Retention</a>
+        <a href="#security" data-copy="navSecurity">6. Security</a>
+        <a href="#rights" data-copy="navRights">7. Your choices</a>
+        <a href="#children" data-copy="navChildren">8. Children</a>
+        <a href="#changes" data-copy="navChanges">9. Changes</a>
+        <a href="#contact" data-copy="navContact">10. Contact</a>
+      </aside>
+
+      <article data-lang="en" class="active">
+        <section id="scope"><h2>1. Scope</h2><p>This Privacy Policy applies to the LUMEX VPN™ Android application and the related backend services required to provide VPN access, Premium activation, service notifications, support, and security.</p></section>
+        <section id="data"><h2>2. Information we process</h2><p>We process only information reasonably needed to operate and protect the Service:</p><ul><li><strong>Device and app data:</strong> a pseudonymous technical device identifier (LUMEX ID/HWID), manufacturer and model, operating system, app version, platform, and basic language settings.</li><li><strong>Account and entitlement data:</strong> Premium code, activation state, expiry time, device slot, and free-traffic cycle information.</li><li><strong>Service activity:</strong> connection timestamps, selected country or server identifier, aggregated traffic volume, connection result, and server latency/availability results.</li><li><strong>Diagnostics:</strong> technical error and diagnostic information when needed to investigate failures or when you run the diagnostic feature. Diagnostic data is not intended to contain browsing content.</li><li><strong>Notifications:</strong> a Firebase Cloud Messaging token, when available, so the app can receive important service and account updates.</li><li><strong>Network data:</strong> IP addresses and ordinary network metadata may be processed transiently by servers and infrastructure providers to establish and secure a connection.</li><li><strong>Support data:</strong> information you voluntarily send when contacting support.</li></ul></section>
+        <section id="use"><h2>3. How we use information</h2><ul><li>provide and maintain VPN connectivity;</li><li>activate Premium and enforce device, time, and traffic limits;</li><li>select servers, measure availability, and improve reliability;</li><li>deliver required notices and account-status updates;</li><li>prevent fraud, abuse, automated attacks, and unauthorized access;</li><li>diagnose faults and provide user support;</li><li>comply with applicable legal obligations.</li></ul></section>
+        <section id="sharing"><h2>4. Service providers and disclosure</h2><p>We do not sell personal data. The minimum necessary information may be processed by hosting and network infrastructure providers, Firebase Cloud Messaging / Google Play services for notifications and app delivery, and support services. Information may also be disclosed when required by applicable law or necessary to protect users and the Service.</p><p>These providers process data under their own terms and privacy practices. Data may be processed in countries other than your own where our infrastructure or providers operate.</p></section>
+        <section id="retention"><h2>5. Data retention</h2><p>Information is kept only for as long as reasonably necessary to operate the Service, preserve activation and anti-abuse records, meet legal obligations, resolve disputes, and maintain security. Retention periods differ by record type. Data that is no longer required is deleted or anonymized where reasonably possible.</p></section>
+        <section id="security"><h2>6. Security</h2><p>We use reasonable technical and organizational safeguards designed to protect information against unauthorized access, alteration, disclosure, and loss. No system or transmission method can be guaranteed to be completely secure.</p></section>
+        <section id="rights"><h2>7. Your choices and requests</h2><p>You may request access to, correction of, or deletion of information associated with your LUMEX ID, subject to records we must retain for security, fraud prevention, dispute resolution, or legal compliance. You may disable notifications in Android settings, but this can prevent timely delivery of important service updates.</p></section>
+        <section id="children"><h2>8. Children</h2><p>The Service is not directed to children under 13, or the higher minimum age required in their jurisdiction. We do not knowingly collect personal information from children in violation of applicable law. A parent or guardian who believes a child provided information should contact us.</p></section>
+        <section id="changes"><h2>9. Changes to this Policy</h2><p>We may update this Policy when the Service, legal requirements, or data practices change. The effective date above will be revised, and material changes may also be communicated in the app or through an official service channel.</p></section>
+        <section id="contact"><h2>10. Contact</h2><p>For privacy questions or data requests, contact LUMEX VPN™ support on Telegram: <a href="https://t.me/lumexvpn_tm_help" rel="noopener noreferrer">@lumexvpn_tm_help</a>. Include your LUMEX ID so we can locate the relevant record; do not send passwords or payment-card details.</p></section>
+      </article>
+
+      <article data-lang="ru">
+        <section><h2>1. Область действия</h2><p>Политика распространяется на приложение LUMEX VPN™ для Android и связанные серверные сервисы, необходимые для VPN-доступа, активации Premium, уведомлений, поддержки и безопасности.</p></section>
+        <section><h2>2. Какие данные обрабатываются</h2><ul><li><strong>Данные устройства и приложения:</strong> псевдонимный технический идентификатор (LUMEX ID/HWID), производитель и модель, версия ОС и приложения, платформа и язык.</li><li><strong>Данные доступа:</strong> Premium-код, статус активации, срок действия, слот устройства и цикл бесплатного трафика.</li><li><strong>Работа сервиса:</strong> время подключения, выбранная страна или идентификатор сервера, общий объём трафика, результат подключения, задержка и доступность серверов.</li><li><strong>Диагностика:</strong> технические ошибки и результаты диагностики, необходимые для поиска неисправностей. Они не предназначены для сбора содержимого посещаемых страниц.</li><li><strong>Уведомления:</strong> токен Firebase Cloud Messaging, если он доступен.</li><li><strong>Сетевые данные:</strong> IP-адрес и обычные сетевые метаданные могут временно обрабатываться инфраструктурой для установления и защиты соединения.</li><li><strong>Поддержка:</strong> сведения, которые пользователь добровольно сообщает поддержке.</li></ul></section>
+        <section><h2>3. Для чего используются данные</h2><p>Для работы VPN, активации Premium и учёта лимитов, выбора серверов, уведомлений, защиты от злоупотреблений, диагностики, поддержки и выполнения требований закона.</p></section>
+        <section><h2>4. Поставщики услуг</h2><p>Мы не продаём персональные данные. Минимально необходимые сведения могут обрабатываться поставщиками серверной и сетевой инфраструктуры, Firebase Cloud Messaging / Google Play, а также сервисами поддержки. Данные могут быть раскрыты, если этого требует закон или безопасность пользователей и сервиса.</p></section>
+        <section><h2>5. Хранение</h2><p>Данные хранятся только столько, сколько обоснованно необходимо для работы сервиса, активаций, защиты от злоупотреблений, выполнения закона и разрешения споров. Ненужные сведения удаляются или обезличиваются, когда это практически возможно.</p></section>
+        <section><h2>6. Безопасность</h2><p>Мы применяем разумные технические и организационные меры защиты. При этом ни один способ хранения или передачи данных не может гарантировать абсолютную безопасность.</p></section>
+        <section><h2>7. Права пользователя</h2><p>Можно запросить доступ, исправление или удаление данных, связанных с LUMEX ID, кроме записей, которые необходимо сохранить для безопасности, предотвращения мошенничества, разрешения споров или соблюдения закона.</p></section>
+        <section><h2>8. Дети</h2><p>Сервис не предназначен для детей младше 13 лет либо более высокого минимального возраста, установленного местным законодательством. Родитель или опекун может связаться с нами, если считает, что ребёнок передал данные.</p></section>
+        <section><h2>9. Изменения</h2><p>Политика может обновляться при изменении сервиса, закона или практик обработки данных. Дата вступления в силу будет изменена; о существенных изменениях также может сообщаться в приложении или официальном канале.</p></section>
+        <section><h2>10. Контакты</h2><p>По вопросам конфиденциальности и удаления данных: <a href="https://t.me/lumexvpn_tm_help" rel="noopener noreferrer">@lumexvpn_tm_help</a>. Укажите LUMEX ID, чтобы мы нашли запись; не отправляйте пароли и данные банковской карты.</p></section>
+      </article>
+
+      <article data-lang="tk">
+        <section><h2>1. Ulanylyş çägi</h2><p>Bu Syýasat LUMEX VPN™ Android programmasyna we VPN elýeterliligini, Premium işjeňleşdirmesini, habarnamalary, goldawy hem-de howpsuzlygy üpjün edýän serwer hyzmatlaryna degişlidir.</p></section>
+        <section><h2>2. Işlenýän maglumatlar</h2><ul><li><strong>Enjam we programma:</strong> lakamlaşdyrylan tehniki ID (LUMEX ID/HWID), öndüriji, model, ulgam we programma wersiýasy, platforma hem-de dil.</li><li><strong>Elýeterlilik:</strong> Premium kody, işjeňleşdirme ýagdaýy, möhleti, enjam orny we mugt trafik döwri.</li><li><strong>Hyzmat işi:</strong> birikme wagty, saýlanan ýurt ýa-da serwer ID-si, jemlenen trafik, birikme netijesi, ping we elýeterlilik.</li><li><strong>Diagnostika:</strong> näsazlygy tapmak üçin tehniki ýalňyşlyklar we diagnostika netijeleri. Olar web sahypalarynyň mazmunyny ýygnamak üçin niýetlenmeýär.</li><li><strong>Habarnamalar:</strong> elýeterli bolsa Firebase Cloud Messaging tokeni.</li><li><strong>Tor maglumatlary:</strong> birikmäni döretmek we goramak üçin IP salgysy hem-de adaty tor metadata wagtlaýyn işlenip bilner.</li><li><strong>Goldaw:</strong> ulanyjynyň meýletin iberen maglumatlary.</li></ul></section>
+        <section><h2>3. Maglumatlaryň ulanylyşy</h2><p>VPN-i işletmek, Premium-y işjeňleşdirmek, çäkleri hasaplamak, serwer saýlamak, habarnama ibermek, hyýanatçylygyň öňüni almak, näsazlygy anyklamak, goldaw bermek we kanuny talaplary ýerine ýetirmek üçin.</p></section>
+        <section><h2>4. Hyzmat üpjün edijiler</h2><p>Şahsy maglumatlary satmaýarys. Diňe zerur bolan iň az maglumat hosting we tor üpjün edijileri, Firebase Cloud Messaging / Google Play hem-de goldaw hyzmatlary tarapyndan işlenip bilner. Kanun ýa-da howpsuzlyk talap eden ýagdaýynda maglumat berlip bilner.</p></section>
+        <section><h2>5. Saklanyş möhleti</h2><p>Maglumatlar hyzmatyň işi, işjeňleşdirmeler, hyýanatçylygyň öňüni almak, kanuny borçlar we jedeller üçin zerur bolan möhletde saklanýar. Zerur däl maglumatlar mümkin boldugyça pozulýar ýa-da anonimleşdirilýär.</p></section>
+        <section><h2>6. Howpsuzlyk</h2><p>Maglumatlary goramak üçin degişli tehniki we guramaçylyk çärelerini ulanýarys. Emma hiç bir saklama ýa-da geçiriş usuly doly howpsuzlygy kepillendirip bilmeýär.</p></section>
+        <section><h2>7. Ulanyjynyň hukuklary</h2><p>LUMEX ID bilen baglanyşykly maglumatlara giriş, düzediş ýa-da pozmak barada ýüz tutup bilersiňiz. Howpsuzlyk, galplygyň öňüni almak, jedeller ýa-da kanun üçin saklanmaly ýazgylar muňa degişli däldir.</p></section>
+        <section><h2>8. Çagalar</h2><p>Hyzmat 13 ýaşdan kiçi çagalara ýa-da ýerli kanun boýunça has ýokary ýaş çäginden kiçilere gönükdirilmeýär. Ene-ata ýa-da hossar çaganyň maglumat iberendigini çaklasa, bize ýüz tutup biler.</p></section>
+        <section><h2>9. Üýtgetmeler</h2><p>Hyzmat, kanun ýa-da maglumat işlemek tertibi üýtgese, Syýasat täzelenip bilner. Güýje girýän senesi täzelener; möhüm üýtgetmeler programmada ýa-da resmi kanalda habar berlip bilner.</p></section>
+        <section><h2>10. Habarlaşmak</h2><p>Gizlinlik ýa-da maglumatlary pozmak baradaky soraglar üçin Telegram goldawyna ýüz tutuň: <a href="https://t.me/lumexvpn_tm_help" rel="noopener noreferrer">@lumexvpn_tm_help</a>. Ýazgyny tapmak üçin LUMEX ID-ni görkeziň; parol ýa-da bank kart maglumatlaryny ibermäň.</p></section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="wrap">© 2026 LUMEX VPN™ · Privacy Policy</footer>
+
+  <script>
+    const copy = {
+      en: { title: 'Privacy Policy', lead: 'This policy explains what information LUMEX VPN™ processes, why it is needed, and the choices available to you.', effective: 'Effective: September 11, 2026', promise: '<strong>Privacy by design.</strong> LUMEX VPN™ does not sell personal data and does not store your browsing history, DNS queries, passwords, messages, or file contents.', navScope: '1. Scope', navData: '2. Data we process', navUse: '3. How data is used', navSharing: '4. Service providers', navRetention: '5. Retention', navSecurity: '6. Security', navRights: '7. Your choices', navChildren: '8. Children', navChanges: '9. Changes', navContact: '10. Contact' },
+      ru: { title: 'Политика конфиденциальности', lead: 'Здесь описано, какие данные обрабатывает LUMEX VPN™, зачем они нужны и какие возможности есть у пользователя.', effective: 'Действует с 11 сентября 2026 года', promise: '<strong>Конфиденциальность по умолчанию.</strong> LUMEX VPN™ не продаёт персональные данные и не хранит историю посещений, DNS-запросы, пароли, сообщения или содержимое файлов.', navScope: '1. Область действия', navData: '2. Какие данные', navUse: '3. Использование', navSharing: '4. Поставщики', navRetention: '5. Хранение', navSecurity: '6. Безопасность', navRights: '7. Ваши права', navChildren: '8. Дети', navChanges: '9. Изменения', navContact: '10. Контакты' },
+      tk: { title: 'Gizlinlik syýasaty', lead: 'Bu ýerde LUMEX VPN™ haýsy maglumatlary işleýändigi, olaryň näme üçin gerekdigini we ulanyjynyň mümkinçiliklerini düşündirýäris.', effective: 'Güýje girýär: 11 sentýabr 2026', promise: '<strong>Gizlinlik esasy ýörelgedir.</strong> LUMEX VPN™ şahsy maglumatlary satmaýar we girilen sahypalaryň taryhyny, DNS soraglaryny, parollary, habarlary ýa-da faýllaryň mazmunyny saklamaýar.', navScope: '1. Ulanylyş çägi', navData: '2. Maglumatlar', navUse: '3. Ulanylyşy', navSharing: '4. Üçünji taraplar', navRetention: '5. Saklanyşy', navSecurity: '6. Howpsuzlyk', navRights: '7. Hukuklaryňyz', navChildren: '8. Çagalar', navChanges: '9. Üýtgetmeler', navContact: '10. Habarlaşmak' }
+    };
+
+    function setLanguage(lang) {
+      if (!copy[lang]) lang = 'en';
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-lang]').forEach(el => el.classList.toggle('active', el.dataset.lang === lang));
+      const sectionIds = ['scope', 'data', 'use', 'sharing', 'retention', 'security', 'rights', 'children', 'changes', 'contact'];
+      document.querySelectorAll('article section').forEach(el => el.removeAttribute('id'));
+      document.querySelectorAll(`article[data-lang="${lang}"] section`).forEach((el, index) => { if (sectionIds[index]) el.id = sectionIds[index]; });
+      document.querySelectorAll('[data-switch]').forEach(el => el.classList.toggle('active', el.dataset.switch === lang));
+      document.querySelectorAll('[data-copy]').forEach(el => {
+        const value = copy[lang][el.dataset.copy];
+        if (value) el.innerHTML = value;
+      });
+      try { localStorage.setItem('lumex-policy-language', lang); } catch (_) {}
+    }
+
+    document.querySelectorAll('[data-switch]').forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.switch)));
+    let initial = 'en';
+    try { initial = localStorage.getItem('lumex-policy-language') || 'en'; } catch (_) {}
+    setLanguage(initial);
+  </script>
+</body>
+</html>
